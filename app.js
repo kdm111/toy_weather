@@ -29,7 +29,7 @@ app.get("/get/weather",  async (req, res) => {
   const {name, lat, lon}= regions[req.query.region]
   const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`)
   const weatherData = result.data.weather[0]
-
+  console.log(weatherData.main)
   const ret = {
     "name" : name,
     "weather" : weather[weatherData.main].title,

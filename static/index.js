@@ -2,11 +2,18 @@
 const weatherTitle = document.querySelector("#weatherTitle")
 const weatherIcon = document.querySelector("#weatherIcon")
 const weatherDescription = document.querySelector("#weatherDescription")
-
 const regionsDom = document.querySelectorAll("path")
+let currPath = null
+
 regionsDom.forEach((regionDom) => {
   regionDom.addEventListener("click", async function (e) {
+    if (currPath) {
+      currPath.classList.remove("selected")
+    }
+    currPath = e.target
+    currPath.classList.add("selected")
     const region = e.target.getAttribute("name")
+
     try {
       let result = await axios({
         method : "get",
@@ -22,3 +29,10 @@ regionsDom.forEach((regionDom) => {
     }
   })
 })
+
+function blankColor() {
+  regionsDom.forEach((regionDom) => {
+    regionDom.classList
+  })
+}
+

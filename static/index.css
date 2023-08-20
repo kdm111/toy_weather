@@ -4,15 +4,19 @@
   box-sizing: border-box;
 }
 body {
-
   display: flex;
   justify-content: space-between;
   height: 100vh;
 }
+
 #mapContainer {
   display: flex;
   align-items: center;
 }
+.selected { 
+  fill : lightblue;
+}
+
 path:hover {
   fill: lightblue;
 }
