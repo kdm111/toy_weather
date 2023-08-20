@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+#mapContainer {
+  display: flex;
+  align-items: center;
+}
+path:hover {
+  fill: lightblue;
+}
+#weatherContainer {
+  width: 50%;
+  padding: 5%;
+  background-color: lightgray;
+}
